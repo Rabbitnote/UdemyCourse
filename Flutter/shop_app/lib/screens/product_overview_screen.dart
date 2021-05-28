@@ -53,7 +53,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
                 },
               ),
               value: cart.itemCount.toString(),
-              color: Colors.black,
+              color: Theme.of(context).accentColor,
             ),
           ),
         ],
