@@ -2,5 +2,5 @@
 
 ## This link for study how's scss work
 ```
-https://codepen.io/pen/?editors=1100
+https://codepen.io/note-thanakorn/pen/RwVRqeO?editors=1100
 ```
