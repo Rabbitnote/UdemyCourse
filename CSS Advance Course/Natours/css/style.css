@@ -1,73 +1,59 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-
 * {
-    /*We adding these for to reset to default website becuase we adding some 
+  /*We adding these for to reset to default website becuase we adding some 
     h1 will adding some margin and padding*/
-    margin: 0;
-    padding: 0;
-    /* remove the border and padidng added*/
-    box-sizing: border-box;
-}
+  margin: 0;
+  padding: 0;
+  /* remove the border and padidng added*/
+  box-sizing: border-box; }
+
 body {
-    /*Style we want to use*/
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.7;
-    color: #777;
-    padding: 30px;
-}
+  /*Style we want to use*/
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px; }
 
 .header {
-    height: 95vh;
-    /*linear gradient in the first is direction second is color of the left and the right*/
-    background-image: linear-gradient(to right bottom, #7ed56faf, #28b485c6),
-        url('../img/hero.jpg');
-    /*Cover over the page*/
-    background-size: cover;
-    /**Background postion for backgroundimg that stay in that position. In this case backgroundImg will always stay at the top*/
-    background-position: top;
-    /*Clippath is doing for clip the shape of img*/
-    /* These number inside clippath is co ordinate that your want to mark on it*/
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-}
-/*On each name have each purpose that its made code more cleaner*/
-.logo-box {
+  height: 95vh;
+  /*linear gradient in the first is direction second is color of the left and the right*/
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  /*Cover over the page*/
+  background-size: cover;
+  /**Background postion for backgroundimg that stay in that position. In this case backgroundImg will always stay at the top*/
+  background-position: top;
+  /*Clippath is doing for clip the shape of img*/
+  /* These number inside clippath is co ordinate that your want to mark on it*/
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  /*On each name have each purpose that its made code more cleaner*/ }
+  .header__logo-box {
     position: absolute;
     top: 50px;
-    left: 50px;
-}
-.logo {
-    height: 35px;
-}
-.text-box {
+    left: 50px; }
+  .header__logo {
+    height: 35px; }
+  .header__logo {
+    height: 35px; }
+  .header__text-box {
     position: absolute;
     text-transform: uppercase;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-}
-.head-primary {
-    color: #fff;
-    /*Using to fix some animation that shaking*/
-    backface-visibility: hiddden;
-    margin-bottom: 40px;
-}
-.heading-main {
+    text-align: center; }
+
+.heading-primary {
+  color: #fff;
+  /*Using to fix some animation that shaking*/
+  backface-visibility: hiddden;
+  margin-bottom: 40px; }
+  .heading-primary--main {
     display: block;
     font-size: 60px;
     font-weight: 400;
     /*To space the charecter*/
     letter-spacing: 35px;
-
     animation-name: moveInLeft;
     animation-duration: 2s;
     animation-timing-function: ease-out;
@@ -76,97 +62,83 @@ body {
     animation-delay:3s;
     Will doing loop by number of iteration count
     animation-iteration-count: 3;
-    */
-}
-.heading-sub {
+    */ }
+  .heading-primary--sub {
     display: block;
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17.4px;
     animation-name: moveInRight;
     animation-duration: 2s;
-    animation-timing-function: ease-out;
-}
+    animation-timing-function: ease-out; }
+
 @keyframes moveInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    80% {
-        transform: translateX(10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-@keyframes moveInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    80% {
-        transform: translateX(-10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-@keyframes moveInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-/*Use pseudo class style element to special*/
-.btn:link,
-.btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 15px 40px;
-    display: inline-block;
-    border-radius: 100px;
-    transition: all 0.2;
-    position: relative;
-}
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-.btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-.btn-white {
-    background-color: #fff;
-    color: #777;
-    
-}
-.btn-animated{
-animation: moveInUp .5s ease-out .75s;
-animation-fill-mode: backwards;
-}
-.btn::after {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition:all .4s;
-}
-.btn-white::after {
-    background-color: #fff;
-}
-.btn:hover::after{
-    transform:scale(1.4) scaleY(1.6); 
+  0% {
     opacity: 0;
-}
+    transform: translateX(-100px); }
+  80% {
+    transform: translateX(10px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  80% {
+    transform: translateX(-10px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+/*Use pseudo class style element to special*/
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2;
+  position: relative; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scale(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
+
+.btn--animated {
+  animation: moveInUp 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards; }
+
+.btn::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s; }

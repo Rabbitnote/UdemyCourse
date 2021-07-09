@@ -1,0 +1,180 @@
+//Sass could let your to make valuable for resusable
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+$color-grey-dark: #777;
+$color-white: #fff;
+$color-black: #000;
+* {
+    /*We adding these for to reset to default website becuase we adding some 
+    h1 will adding some margin and padding*/
+    margin: 0;
+    padding: 0;
+    /* remove the border and padidng added*/
+    box-sizing: border-box;
+}
+body {
+    /*Style we want to use*/
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 30px;
+}
+
+.header {
+    height: 95vh;
+    /*linear gradient in the first is direction second is color of the left and the right*/
+    background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)
+        ),
+        url('../img/hero.jpg');
+    /*Cover over the page*/
+    background-size: cover;
+    /**Background postion for backgroundimg that stay in that position. In this case backgroundImg will always stay at the top*/
+    background-position: top;
+    /*Clippath is doing for clip the shape of img*/
+    /* These number inside clippath is co ordinate that your want to mark on it*/
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    /*On each name have each purpose that its made code more cleaner*/
+    &__logo-box {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    }
+    &__logo {
+        height: 35px;
+    }
+    &__logo {
+        height: 35px;
+    }
+    &__text-box {
+        position: absolute;
+        text-transform: uppercase;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+.heading-primary {
+    color: $color-white;
+    /*Using to fix some animation that shaking*/
+    backface-visibility: hiddden;
+    margin-bottom: 40px;
+
+    &--main {
+        display: block;
+        font-size: 60px;
+        font-weight: 400;
+        /*To space the charecter*/
+        letter-spacing: 35px;
+
+        animation-name: moveInLeft;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+        /*
+    Will Delay after the web start and then animation will move
+    animation-delay:3s;
+    Will doing loop by number of iteration count
+    animation-iteration-count: 3;
+    */
+    }
+    &--sub {
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 17.4px;
+        animation-name: moveInRight;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+    }
+}
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80% {
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes moveInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/*Use pseudo class style element to special*/
+.btn {
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 40px;
+        display: inline-block;
+        border-radius: 100px;
+        transition: all 0.2;
+        position: relative;
+    }
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba($color-black, 0.2);
+        &::after {
+            transform: scale(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba($color-black, 0.2);
+    }
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+        &::after {
+            background-color: $color-white;
+        }
+    }
+    &--animated {
+        animation: moveInUp 0.5s ease-out 0.75s;
+        animation-fill-mode: backwards;
+    }
+    &::after {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 0.4s;
+    }
+}
