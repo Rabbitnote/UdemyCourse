@@ -13,7 +13,7 @@
     background-position: top;
     /*Clippath is doing for clip the shape of img*/
     /* These number inside clippath is co ordinate that your want to mark on it*/
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     /*On each name have each purpose that its made code more cleaner*/
     &__logo-box {
         position: absolute;
