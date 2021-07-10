@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before {
+    /*We adding these for to reset to default website becuase we adding some 
+    h1 will adding some margin and padding*/
+    margin: 0;
+    padding: 0;
+    /* remove the border and padidng added*/
+    box-sizing: inherit;
+}
+html {
+    //This defines what 1rem is
+    font-size: 62.5%;
+}
+body{
+    box-sizing: border-box;
+}

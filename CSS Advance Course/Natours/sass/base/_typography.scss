@@ -1,0 +1,43 @@
+body {
+    /*Style we want to use*/
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    // font-size: 16px;
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 30px;
+}
+
+.heading-primary {
+    color: $color-white;
+    /*Using to fix some animation that shaking*/
+    backface-visibility: hiddden;
+    margin-bottom: 40px;
+
+    &--main {
+        display: block;
+        font-size: 60px;
+        font-weight: 400;
+        /*To space the charecter*/
+        letter-spacing: 35px;
+
+        animation-name: moveInLeft;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+        /*
+    Will Delay after the web start and then animation will move
+    animation-delay:3s;
+    Will doing loop by number of iteration count
+    animation-iteration-count: 3;
+    */
+    }
+    &--sub {
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 17.4px;
+        animation-name: moveInRight;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+    }
+}
