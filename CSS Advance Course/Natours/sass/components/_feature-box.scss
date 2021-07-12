@@ -8,6 +8,7 @@
     transition: transform 0.3s;
     &__icon {
         background-clip: text;
+        -webkit-background-clip: text;
         color: transparent;
         background-image: linear-gradient(
             to right,
