@@ -1,5 +1,6 @@
 /*Use pseudo class style element to special*/
 .btn {
+    &,
     &:link,
     &:visited {
         text-transform: uppercase;
@@ -10,8 +11,12 @@
         border-radius: 100px;
         transition: all 0.2;
         position: relative;
+          //Change for the <button> element
+          border: none;
+          cursor: pointer;
+      
     }
-    &:hover {
+    &:hover{
         transform: translateY(-3px);
         box-shadow: 0 10px 20px rgba($color-black, 0.2);
         &::after {
@@ -19,7 +24,8 @@
             opacity: 0;
         }
     }
-    &:active {
+    &:active,&:focus {
+        outline: none;
         transform: translateY(-1px);
         box-shadow: 0 5px 10px rgba($color-black, 0.2);
     }
