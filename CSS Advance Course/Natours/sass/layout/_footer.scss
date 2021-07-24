@@ -4,9 +4,22 @@
     font-size: 1.4rem;
     color: $color-grey-light-1;
 
+    @include respond(tab-port) {
+        padding: 8rem 0;
+    }
+    @include respond(phone) {
+        padding: 6rem 0;
+    }
+
     &__logo-box {
         text-align: center;
         margin-bottom: 8rem;
+        @include respond(tab-port) {
+            margin-bottom: 6rem;
+        }
+        @include respond(phone) {
+            margin-bottom: 4rem;
+        }
     }
     &__logo {
         width: 15rem;
@@ -16,6 +29,13 @@
         border-top: 1px solid $color-grey-dark;
         padding-top: 2rem;
         display: inline-block;
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+        }
+        @include respond(phone) {
+            padding: 6rem 0;
+        }
     }
     &__list {
         list-style: none;
@@ -27,24 +47,34 @@
         }
     }
     &__link {
-        &:visited,&:link{
+        &:visited,
+        &:link {
             color: $color-grey-light-1;
             background-color: $color-grey-dark-3;
             text-decoration: none;
             text-transform: uppercase;
             display: inline-block;
-            transition: all .2s;
+            transition: all 0.2s;
+            @include respond(tab-land) {
+                margin-left: 0.5rem;
+            }
         }
-        &:hover,&:active{
+        &:hover,
+        &:active {
             color: $color-primary;
-            box-shadow: 0 1rem 2rem rgba($color-black,.4rem);
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.4rem);
             transform: rotate(5deg) scale(1.3);
         }
     }
-    &__copyright{
+    &__copyright {
         border-top: 1px solid $color-grey-dark;
         padding-top: 2rem;
         width: 80%;
         float: right;
+        @include respond(tab-port) {
+            width: 100%;
+            float: none;
+        }
+    
     }
 }

@@ -6,7 +6,7 @@
             rgba($color-primary-light, 0.8),
             rgba($color-primary-dark, 0.8)
         ),
-        url('../img/hero.jpg');
+        url('../img/hero-small.jpg');
     /*Cover over the page*/
     background-size: cover;
     /**Background postion for backgroundimg that stay in that position. In this case backgroundImg will always stay at the top*/
@@ -14,6 +14,18 @@
     /*Clippath is doing for clip the shape of img*/
     /* These number inside clippath is co ordinate that your want to mark on it*/
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    @media(min-resolution:192dpi) and(min-wdith:37.5em) ,(min-width:125em){
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)
+        ),
+        url('../img/hero.jpg');
+    }
+
+    @include respond(phone){
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
     /*On each name have each purpose that its made code more cleaner*/
     &__logo-box {
         position: absolute;
