@@ -1,3 +1,4 @@
+@import 'abstract/variable';
 @import 'base/base';
 @import 'base/typography';
 
@@ -10,8 +11,9 @@
 @import 'layout/details';
 @import 'layout/review';
 
-@import 'abstract/variable';
+
 
 @import 'components/button';
 
 @import 'base/animation';
+@import 'layout/cta';

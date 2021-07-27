@@ -5,6 +5,10 @@
     margin-bottom: 3rem;
     position: relative;
     overflow: hidden;
+    @media only screen and(max-width:$bp-medium){
+        padding: 2rem;
+        margin-bottom:2rem ;
+    }
 
     &__text {
         margin-bottom: 1.5rem;
