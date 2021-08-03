@@ -1,0 +1,28 @@
+* {
+    font-family: sans-serif;
+}
+.container {
+    margin: 3rem auto;
+
+    &__detail {
+        width: 40%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    &__text {
+        text-align: center;
+        font-size: 1.6rem;
+    }
+    &__label {
+    }
+    &__input {
+        border: none;
+        background-color: #000;
+        color: #fff;
+        border-radius: 3px;
+
+    }
+}
+.u-mg-bt {
+    margin-bottom: 4rem;
+}
