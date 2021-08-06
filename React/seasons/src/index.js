@@ -15,12 +15,12 @@ class App extends React.Component {
         );
     }
     // componentDidMount(){
-    //     console.log('My component was rendered to the screen');
+    //     console.log('My component wßas rendered to the screen');
     // }
     // componentDidUpdate(){
     //     console.log('My component was updated');
     // }
-    //React syas we have to define render
+    //React syas we have to definße render
     render() {
         if (this.state.errorMessage && !this.state.lat) {
             return <div>Error : {this.state.errorMessage}</div>;
