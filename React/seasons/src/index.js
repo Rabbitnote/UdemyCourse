@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SeasonDisplay from './SeasonDisplay';
+import Loading from './Loading';
 
 class App extends React.Component {
     //Going to run first
-    constructor(props) {
-        super(props);
-        this.state = { lat: null, errorMessage: '' };
-    }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = { lat: null, errorMessage: '' };
+    // }
+
+    state = { lat: null, errorMessage: '' };
     componentDidMount() {
         window.navigator.geolocation.getCurrentPosition(
             position => this.setState({ lat: position.coords.latitude }),
@@ -20,17 +23,22 @@ class App extends React.Component {
     // componentDidUpdate(){
     //     console.log('My component was updated');
     // }
-    //React syas we have to definße render
-    render() {
+    renderContent() {
         if (this.state.errorMessage && !this.state.lat) {
             return <div>Error : {this.state.errorMessage}</div>;
         }
         if (!this.state.errorMessage && this.state.lat) {
-            return <div>Lattitude : {this.state.lat}</div>;
+            return <SeasonDisplay lat={this.state.lat}></SeasonDisplay>;
         }
         if (!this.state.errorMessage && !this.state.lat) {
-            return <div>Loading !</div>;
+            return (
+                <Loading message='Please Accept loaction request!!'></Loading>
+            );
         }
+    }
+    //React syas we have to definße render
+    render() {
+        return <div>{this.renderContent()}</div>;
     }
 }
 ReactDOM.render(<App />, document.querySelector('#root'));

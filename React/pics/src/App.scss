@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.searchbar {
+    
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+    &__input {
+        padding: 1rem 30rem;
+    }
+    &__form {
+        padding: 2rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        border-radius: 1rem;
+    }
+    &__text{
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+}
+.container{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    grid-template-rows: repeat(auto-fill,minmax(350px,1fr));
+    row-gap: 1rem;
+    margin-left:auto;
+    margin-right: auto;
+    &_img{
+        width: 350px;
+    }
+}

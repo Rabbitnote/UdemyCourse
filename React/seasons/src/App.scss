@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.summer {
+    color: lightgoldenrodyellow;
+}
+.winter {
+    color: lightblue;
+    -webkit-text-stroke: 2px #222;
+}
+.background {
+    background-image: url('./img/beach.jpeg');
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+}
+.textLoad{
+    margin-top: 2rem;
+    font-family:sans-serif;
+    text-transform: uppercase;
+    transform: translateX(1rem);
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.seasondisplay {
+    padding: 2rem 2rem;
+    font-family: sans-serif;
+    position: relative;
+    z-index: 10;
+
+    &__text {
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%,-50%);
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+
+    &__icon {
+        &:last-child {
+            display: flex;
+            margin-left: auto;
+        }
+        width: 10rem;
+        height: 10rem;
+    }
+}
+.load {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    &:after {
+        content: ' ';
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border-radius: 50%;
+        border: 6px solid #cef;
+        border-color: #cef transparent #cef transparent;
+        animation: loading 1.2s linear infinite;
+    }
+}
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
