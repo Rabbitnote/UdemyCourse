@@ -1,0 +1,35 @@
+* {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.container {
+    &:first-child {
+        margin-top: 2rem;
+    }
+    margin-left: 2rem;
+    padding: 2rem;
+    width: 50%;
+    &_header {
+        display: flex;
+        width: 40%;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 1.2rem;
+    }
+}
+.icon {
+    padding-right: 2rem;
+    font-size: 1.8rem;
+}
+.active {
+    visibility: visible;
+}
+.title {
+    visibility: hidden;
+}
+.content {
+    
+}

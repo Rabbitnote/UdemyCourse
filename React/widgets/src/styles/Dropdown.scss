@@ -1,0 +1,35 @@
+.dropdown {
+    height: 90vh;
+    margin: 1rem;
+    padding: 1rem;
+    &_label {
+        font-weight: 600;
+        font-size: 1.6rem;
+    }
+    &_text {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.8rem;
+    }
+    &_text,
+    &_item {
+        border-top: 2px solid #222;
+        border-left: 2px solid #222;
+        border-right: 2px solid #222;
+        padding: 0.5rem;
+        width: 30%;
+        cursor: pointer;
+        &:last-child {
+            border-bottom: 2px solid #222;
+        }
+    }
+    &_item:hover {
+        background-color: lightgrey;
+    }
+}
+.hideItem {
+    visibility: hidden;
+}
+.showItem {
+    border-bottom: 2px solid #222;
+}
