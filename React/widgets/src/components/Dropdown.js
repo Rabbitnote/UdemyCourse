@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../styles/Dropdown.scss';
-const Dropdown = ({ options, selected, onSelectedChange }) => {
+const Dropdown = ({ options, selected, onSelectedChange,label }) => {
     const [dropdownCheck, setDropdownCheck] = useState(false);
     const ref = useRef();
     useEffect(() => {
@@ -43,7 +43,7 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
     });
     return (
         <div ref={ref} className='dropdown'>
-            <label className='dropdown_label'>Select a Color </label>
+            <label className='dropdown_label'>{label}</label>
             <div
                 className={`dropdown_text ${dropdownCheck ? '' : 'showItem'}`}
                 onClick={() => setDropdownCheck(!dropdownCheck)}

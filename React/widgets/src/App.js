@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import Accordion from './components/Accordion';
 import Search from './components/Search';
+import Translate from './components/Translate';
 import Dropdown from './components/Dropdown';
+import Route from './components/Route';
+import Navbar from './components/Navbar';
 
 const items = [
     {
@@ -22,21 +25,29 @@ const options = [
     { label: 'The Color Green', value: 'green' },
     { label: 'The Color Blue', value: 'blue' }
 ];
+
 export default () => {
     const [selected, setSelected] = useState(options[0]);
-    const [showDropdown, setShownDropdown] = useState(true);
     return (
         <div>
-            <button onClick={() => setShownDropdown(!showDropdown)}>
-                Toggle Dropdown
-            </button>
-            {showDropdown ? (
+            <Navbar/>
+            <Route path='/'>
+                <Accordion items={items} />
+            </Route>
+            <Route path='/list'>
+                <Search />
+            </Route>
+            <Route path='/dropdown'>
                 <Dropdown
+                    label='Select a Color'
                     options={options}
                     selected={selected}
                     onSelectedChange={setSelected}
                 />
-            ) : null}
+            </Route>
+            <Route path='/translate'>
+                <Translate />
+            </Route>
         </div>
     );
 };
