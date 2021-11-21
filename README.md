@@ -1,2 +1,2 @@
 # UdemyCourse
-### This Reposistry is for learning many things in udemy.
+### This Reposistry for learning many things in udemy.
