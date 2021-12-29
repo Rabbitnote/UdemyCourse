@@ -3,7 +3,7 @@ const app = express(); //Running express that we register | app this for setup c
 
 //Here 
 app.get('/',(req,res)=>{
-    res.send({hi:'there'})
+    res.send({bye:'buddy'})
 });
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
